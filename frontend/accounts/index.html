@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/accounts.min.js" ></script>
+
+    <title>Excel Changer</title>
+</head>
+<body>
+
+<div id="root">
+    <aside>
+        <div class="menu__container">
+            <a class="btn-selector p-3 active" href="/accounts/">
+                Аккаунты
+            </a>
+            <a class="btn-selector p-3 " href="/adresses/?account_name=all_accounts">
+                База адресов
+            </a>
+            <a class="btn-selector p-3" href="/gather-adress/">
+                Сбор адресов
+            </a>
+        </div>
+    </aside>
+    <section>
+        <div class="accounts_container">
+            <div class="accounts_list">
+               
+            </div>
+            <div class="add_btn add_account">&nbsp;&nbsp;Добавить</div>
+        </div>
+    </section>
+</div>
+<div class="modals">
+    <div class="modal modal_add_account">
+      <div class="modal_body" >
+        <div data-content='closeX'></div>
+        <div class="titles">
+            <div class="title_account">Новый акканут</div>
+        </div>
+        <div class="modal_main">
+            <input name="account_push" class=" account_push form_control_item" id="account_push" >
+        </div>
+        <div class="modal_controls">
+            <div class="add_btn_withoutPlus add_account_to_list">Добавить</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal d-block loader">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: unset; display: block; margin: 15% auto" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <g transform="rotate(0 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#93dbe9">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(30 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#689cc5">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8333333333333334s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(60 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#5e6fa3">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(90 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#3b4368">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6666666666666666s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(120 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#191d3a">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5833333333333334s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(150 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#d9dbee">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(180 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#b3b7e2">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4166666666666667s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(210 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#93dbe9">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3333333333333333s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(240 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#689cc5">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(270 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#5e6fa3">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.16666666666666666s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(300 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#3b4368">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.08333333333333333s" repeatCount="indefinite"></animate>
+              </rect>
+            </g><g transform="rotate(330 50 50)">
+              <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#191d3a">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animate>
+              </rect>
+            </g>
+            </svg>
+
+  </div>
+</div>
+    
+</body>
+</html>
